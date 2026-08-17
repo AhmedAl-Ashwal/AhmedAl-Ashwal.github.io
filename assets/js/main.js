@@ -13,7 +13,7 @@
       'nav.skills': 'Skills',
       'nav.education': 'Education',
       'nav.contact': 'Contact',
-      'hero.badge': 'Open to work, collaboration & graduate study',
+      'hero.badge': 'Open to work, collaboration',
       'hero.title': 'I turn paper operations into <em>digital systems</em>.',
       'hero.sub': 'ERP Systems, Web & Mobile Applications Developer at the Agricultural & Fisheries Production Promotion Fund — building with Laravel, Flutter, and Python from Sana’a, Yemen.',
       'hero.ctaEmail': 'Email me',
@@ -75,7 +75,7 @@
       'edu.lang2': 'English — B2 (CEFR)',
       'contact.eyebrow': 'CONTACT',
       'contact.title': 'Let’s build something reliable',
-      'contact.lede': 'Whether it’s an inventory system, a mobile app, or an idea that’s still on paper — I’d be glad to hear from you, in Arabic or English.',
+      'contact.lede': 'Whether it’s an ERP system, a mobile app, web app, or an idea that’s still on paper — I’d be glad to hear from you.',
       'footer.left': '© 2026 Ahmed Alashwal — Sana’a, Yemen',
       'footer.right': 'صُنع بعناية في صنعاء'
     },
@@ -87,7 +87,7 @@
       'nav.skills': 'المهارات',
       'nav.education': 'التعليم',
       'nav.contact': 'تواصل',
-      'hero.badge': 'متاح للعمل والتعاون والدراسات العليا',
+      'hero.badge': 'متاح للعمل والتعاون',
       'hero.title': 'أحوّل العمليات الورقية إلى <em>أنظمة رقمية</em>.',
       'hero.sub': 'مطوّر أنظمة ERP ومواقع ويب وتطبيقات جوال في صندوق تشجيع الإنتاج الزراعي والسمكي — أعمل بـ Laravel وFlutter وPython من صنعاء، اليمن.',
       'hero.ctaEmail': 'راسلني',
@@ -149,7 +149,7 @@
       'edu.lang2': 'الإنجليزية — B2 وفق CEFR',
       'contact.eyebrow': 'تواصل',
       'contact.title': 'لنبنِ شيئاً موثوقاً',
-      'contact.lede': 'سواء كان نظام مخازن، أو تطبيق جوال، أو فكرة ما تزال على الورق — يسعدني أن أسمع منك، بالعربية أو الإنجليزية.',
+      'contact.lede': 'سواء كان نظام ERP، أو تطبيق جوال، أو تطبيق ويب، أو فكرة ما تزال على الورق — يسعدني أن أسمع منك.',
       'footer.left': '© 2026 أحمد الأشول — صنعاء، اليمن',
       'footer.right': 'Crafted with care in Sana’a'
     }
