@@ -22,7 +22,7 @@
       'ledger.gpa': 'DEGREE',
       'ledger.gpaV': 'BIT — GPA 3.79 / 4.00',
       'ledger.stack': 'STACK',
-      'arch.caption': 'A qamariyya — the stained-glass window of Sana’a',
+      'sysmap.caption': 'System map — the modules I build and connect',
       'about.eyebrow': 'ABOUT',
       'about.title': 'A developer institutions can run on',
       'about.p1': 'I’m a Business Information Technology graduate (GPA 3.79/4.00) with hands-on experience building web, mobile, and ERP applications. At the Agricultural & Fisheries Production Promotion Fund, I introduced the organization’s first digital inventory system — and today I design, build, and maintain the custom ERP it runs on.',
@@ -96,7 +96,7 @@
       'ledger.gpa': 'المؤهل',
       'ledger.gpaV': 'بكالوريوس BIT — معدل 3.79 / 4.00',
       'ledger.stack': 'التقنيات',
-      'arch.caption': 'قمرية — نافذة الزجاج الملوّن الصنعانية',
+      'sysmap.caption': 'خريطة النظام — الوحدات التي أبنيها وأصل بينها',
       'about.eyebrow': 'عنّي',
       'about.title': 'مطوّر تعتمد عليه المؤسسات',
       'about.p1': 'خريج تقنية معلومات الأعمال (BIT) بمعدل تراكمي 3.79/4.00، مع خبرة عملية في تطوير تطبيقات الويب والجوال وأنظمة ERP. في صندوق تشجيع الإنتاج الزراعي والسمكي أدخلتُ أول نظام رقمي لإدارة المخازن إلى المؤسسة، وأتولى اليوم تصميم وبناء وصيانة نظام ERP الذي تعمل به.',
@@ -233,10 +233,10 @@
     revealEls.forEach(function (el) { el.classList.add('visible'); });
   }
 
-  /* light the qamariyya panes after load */
+  /* boot the system map after load */
   window.addEventListener('load', function () {
-    var arch = document.querySelector('.arch');
-    if (arch) requestAnimationFrame(function () { arch.classList.add('lit'); });
+    var map = document.querySelector('.sysmap');
+    if (map) requestAnimationFrame(function () { map.classList.add('lit'); });
   });
 
   /* top bar surface on scroll */
