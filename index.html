@@ -112,10 +112,6 @@
 
     <figure class="sysmap reveal" aria-label="System architecture diagram with Ahmed Alashwal as the central node connected to web, mobile, data, and AI modules">
       <svg viewBox="0 0 460 440" role="img" aria-hidden="true" focusable="false">
-        <defs>
-          <clipPath id="coreClip"><circle cx="230" cy="217" r="62"/></clipPath>
-        </defs>
-
         <!-- connectors -->
         <g class="sys-wires" fill="none" stroke-width="1.5">
           <path class="wire" d="M 186,162 C 150,130 128,108 96,84"/>
@@ -158,7 +154,11 @@
         <g class="sys-node sys-core">
           <circle class="core-ring" cx="230" cy="217" r="74"/>
           <circle class="core-bg" cx="230" cy="217" r="62"/>
-          <image href="assets/images/profile.png" x="168" y="155" width="124" height="124" clip-path="url(#coreClip)" preserveAspectRatio="xMidYMid slice"/>
+          <g class="core-mark" fill="none" stroke-linecap="round">
+            <path d="M216 191 C202 191 208 208 194 217 C208 226 202 243 216 243"/>
+            <path d="M244 191 C258 191 252 208 266 217 C252 226 258 243 244 243"/>
+          </g>
+          <circle class="core-dot" cx="230" cy="217" r="6"/>
           <circle class="core-edge" cx="230" cy="217" r="62"/>
           <g class="status">
             <rect x="196" y="296" width="68" height="21" rx="10.5"/>
