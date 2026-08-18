@@ -15,6 +15,7 @@
   --circuit-soft: #7CB2FF;
   --signal: #3ECF8E;
   --neural: #A78BFA;
+  --pulse-red: #E5484D;
   --line: rgba(91, 157, 255, 0.16);
   --line-soft: rgba(141, 162, 188, 0.14);
   --grid: rgba(91, 157, 255, 0.05);
@@ -330,6 +331,8 @@ html[lang="ar"] .hero-title em {
   opacity: 0;
   transition: opacity 0.6s ease 1.05s;
 }
+.sys-wires .flow-web { stroke: var(--pulse-red); }
+.sys-wires .flow-mobile { stroke: var(--circuit); }
 .sys-wires .flow-ai { stroke: var(--neural); }
 @keyframes dashflow { to { stroke-dashoffset: -16; } }
 
@@ -348,6 +351,8 @@ html[lang="ar"] .hero-title em {
   stroke-width: 1.2;
 }
 .sys-node .port { fill: var(--signal); }
+.sys-node .port-web { fill: var(--pulse-red); }
+.sys-node .port-mobile { fill: var(--circuit); }
 .sys-node .port-ai { fill: var(--neural); }
 
 .mod-name {
