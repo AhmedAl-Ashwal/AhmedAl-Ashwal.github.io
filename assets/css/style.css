@@ -373,8 +373,7 @@ html[lang="ar"] .hero-title em {
   stroke-dasharray: 5 7;
 }
 .core-bg { fill: var(--panel-2); }
-.core-mark path { stroke: var(--circuit); stroke-width: 4.5; }
-.core-spokes { opacity: 0.55; }
+.core-mark path { stroke: var(--circuit); stroke-width: 6; }
 .core-nodes circle { fill: var(--circuit); }
 .core-dot { fill: var(--signal); }
 .core-edge {
