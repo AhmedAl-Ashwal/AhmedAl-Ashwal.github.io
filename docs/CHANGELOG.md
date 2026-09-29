@@ -14,6 +14,7 @@ All notable changes to this project are documented here, in the style of [Keep a
 - `docs/ARCHITECTURE.md` and this changelog.
 
 ### Changed
+- Automated-test counts are no longer used as selling points: project highlights now show currencies and books per institute (Wasl), the app and its dashboard (Fasl) and encrypted cross-device sync (Aman); About shows years of experience instead of a test total.
 - Content rewritten from verified project history; clients shown by sector only.
 - Contact email is now `aalashwal.sa@gmail.com`.
 - Arabic set in Thmanyah; English in IBM Plex.

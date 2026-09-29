@@ -10,7 +10,7 @@ export const PROFILE = {
   linkedin: 'https://www.linkedin.com/in/ahmed-alashwal-b5605537a/',
   site: 'https://ahmedal-ashwal.github.io/',
   guidePdf: 'assets/files/web-pricing-guide-2026.pdf',
-  stats: { tests: '2,200+', erpApps: '18' },
+  stats: { years: '2+', erpApps: '18' },
 };
 
 export const DOMAINS = [
@@ -19,7 +19,7 @@ export const DOMAINS = [
   { id: 'backend', label: { en: 'Backend & Architecture', ar: 'الخلفية والمعمارية' },
     summary: { en: 'APIs, multi-tenant data models, permissions and accounting logic.', ar: 'واجهات برمجية ونماذج بيانات متعددة المستأجرين وصلاحيات ومنطق محاسبي.' } },
   { id: 'mobile', label: { en: 'Mobile', ar: 'الجوال' },
-    summary: { en: 'Cross-platform Flutter apps with encryption, signed release builds and large test suites.', ar: 'تطبيقات Flutter متعددة المنصات مع التشفير ونسخ إصدار موقّعة ومجموعات اختبار كبيرة.' } },
+    summary: { en: 'Cross-platform Flutter apps with on-device encryption and signed release builds.', ar: 'تطبيقات Flutter متعددة المنصات مع التشفير على الجهاز ونسخ إصدار موقّعة.' } },
   { id: 'erp', label: { en: 'ERP', ar: 'تخطيط الموارد ERP' },
     summary: { en: 'ERPNext/Frappe customisation and custom ERP builds for finance, HR, projects and inventory.', ar: 'تخصيص ERPNext/Frappe وبناء أنظمة ERP للمالية والموارد البشرية والمشاريع والمخزون.' } },
   { id: 'data', label: { en: 'Data', ar: 'البيانات' },
@@ -27,7 +27,7 @@ export const DOMAINS = [
   { id: 'ai', label: { en: 'AI & Automation', ar: 'الذكاء الاصطناعي والأتمتة' },
     summary: { en: 'LLM integrations, speech-to-text and AI-assisted engineering workflows.', ar: 'تكامل النماذج اللغوية والتفريغ الصوتي وسير عمل هندسي معزز بالذكاء الاصطناعي.' } },
   { id: 'devops', label: { en: 'DevOps & Quality', ar: 'التشغيل والجودة' },
-    summary: { en: 'Containers, deployment, CI and the tests that keep every release safe.', ar: 'الحاويات والنشر والتكامل المستمر والاختبارات التي تحمي كل إصدار.' } },
+    summary: { en: 'Containers, deployment and CI pipelines that keep every release safe.', ar: 'الحاويات والنشر وخطوط التكامل المستمر التي تحمي كل إصدار.' } },
   { id: 'design', label: { en: 'Design & Docs', ar: 'التصميم والتوثيق' },
     summary: { en: 'Design systems, Arabic typography, print design and technical documentation.', ar: 'أنظمة التصميم والطباعة العربية وتصميم المطبوعات والتوثيق التقني.' } },
 ];
@@ -156,7 +156,7 @@ export const PROJECTS = [
     role: { en: 'Full-stack developer', ar: 'مطور متكامل' },
     summary: { en: 'A multi-role platform for institutes: payroll, attendance, a chart of accounts per institute and multi-country currency.', ar: 'منصة متعددة الأدوار للمعاهد: الرواتب والحضور ودليل حسابات لكل معهد وعملات متعددة الدول.' },
     highlights: [
-      { value: '437', label: { en: 'automated tests passing', ar: 'اختباراً آلياً ناجحاً' } },
+      { value: 'Multi-currency', label: { en: 'separate books per institute', ar: 'دفاتر لكل معهد بعملات متعددة' } },
       { value: 'PWA', label: { en: 'installable on phones', ar: 'قابل للتثبيت على الجوال' } },
     ],
     stack: ['laravel', 'php', 'vue-inertia', 'mysql', 'rest', 'pwa', 'multi-tenancy', 'accounting', 'rbac', 'security', 'pest', 'laravel-cloud', 'rtl', 'git'],
@@ -167,8 +167,8 @@ export const PROJECTS = [
         ar: ['الرواتب والحضور للمعلمين والموظفين.', 'دليل حسابات لكل معهد بمبالغ متعددة العملات.', 'واجهة Sanctum البرمجية وتطبيق ويب قابل للتثبيت.', 'لوحات لكل دور.'],
       },
       engineering: {
-        en: ['Security audit and hardening, including rate limits and authorisation checks.', '437 Pest/PHPUnit tests green before releases.', 'Deployed on Laravel Cloud.'],
-        ar: ['تدقيق أمني وتقوية، منها حدود المعدل وفحوص التفويض.', '437 اختبار Pest/PHPUnit ناجحة قبل الإصدارات.', 'منشور على Laravel Cloud.'],
+        en: ['Security audit and hardening, including rate limits and authorisation checks.', 'Deployed on Laravel Cloud.'],
+        ar: ['تدقيق أمني وتقوية، منها حدود المعدل وفحوص التفويض.', 'منشور على Laravel Cloud.'],
       },
     },
   },
@@ -225,7 +225,7 @@ export const PROJECTS = [
     role: { en: 'Mobile & backend developer', ar: 'مطور الجوال والخلفية' },
     summary: { en: 'A Flutter learning app at version 1.0, with a Laravel/Filament dashboard for content and users in progress.', ar: 'تطبيق تعليمي بـ Flutter وصل إلى الإصدار 1.0، مع لوحة Laravel/Filament للمحتوى والمستخدمين قيد البناء.' },
     highlights: [
-      { value: '558', label: { en: 'automated tests', ar: 'اختباراً آلياً' } },
+      { value: 'App + Admin', label: { en: 'Flutter app and Laravel dashboard', ar: 'تطبيق Flutter ولوحة إدارة Laravel' } },
       { value: 'v1.0', label: { en: 'app complete', ar: 'التطبيق مكتمل' } },
     ],
     stack: ['flutter', 'dart', 'flutter-testing', 'release-signing', 'laravel', 'filament'],
@@ -236,8 +236,8 @@ export const PROJECTS = [
         ar: ['تطبيق Flutter بإصداره 1.0.', 'تصحيح نسخ الإصدار وتوقيعها.', 'لوحة Laravel 13 + Filament 5 (قيد البناء).'],
       },
       engineering: {
-        en: ['558 automated widget and unit tests.'],
-        ar: ['558 اختبار آلي للوحدات والواجهات.'],
+        en: ['A single Flutter codebase for the whole app.'],
+        ar: ['قاعدة شيفرة Flutter واحدة للتطبيق كله.'],
       },
     },
   },
@@ -248,7 +248,7 @@ export const PROJECTS = [
     role: { en: 'Developer', ar: 'المطور' },
     summary: { en: 'A Flutter app whose data syncs end-to-end encrypted through Firebase; the server only ever holds ciphertext.', ar: 'تطبيق Flutter تُزامَن بياناته مشفّرة طرفياً عبر Firebase؛ لا يحمل الخادم إلا نصاً مشفّراً.' },
     highlights: [
-      { value: '1,227', label: { en: 'automated tests', ar: 'اختباراً آلياً' } },
+      { value: 'Cross-device', label: { en: 'encrypted sync through Firebase', ar: 'مزامنة مشفّرة بين الأجهزة عبر Firebase' } },
       { value: 'E2EE', label: { en: 'client-side encryption', ar: 'تشفير على الجهاز' } },
     ],
     stack: ['flutter', 'dart', 'firebase', 'e2ee', 'flutter-testing', 'release-signing'],
@@ -259,8 +259,8 @@ export const PROJECTS = [
         ar: ['التشفير على الجهاز قبل أي مزامنة.', 'Firebase للمصادقة والمزامنة المشفّرة.', 'عامل طرفي لميزات الذكاء الاصطناعي في التطبيق.'],
       },
       engineering: {
-        en: ['1,227 automated tests.', 'Release builds debugged and signed.'],
-        ar: ['1,227 اختباراً آلياً.', 'تصحيح نسخ الإصدار وتوقيعها.'],
+        en: ['Release builds debugged and signed.'],
+        ar: ['تصحيح نسخ الإصدار وتوقيعها.'],
       },
     },
   },

@@ -110,3 +110,11 @@ test('the site carries no personal photo (page, social preview or structured dat
   assert.equal('photo' in data.PROFILE, false);
   assert.doesNotMatch(html, /profile\.(png|jpe?g|webp)/i);
 });
+
+test('automated-test counts are not used as selling points anywhere in the copy', () => {
+  const claim = /\btests?\b|اختبار/i;
+  for (const p of data.PROJECTS) assert.doesNotMatch(JSON.stringify([p.highlights, p.summary, p.detail]), claim, p.id);
+  for (const d of data.DOMAINS) assert.doesNotMatch(JSON.stringify(d.summary), claim, d.id);
+  assert.doesNotMatch(JSON.stringify(data.PROFILE.stats), claim);
+  for (const lang of ['en', 'ar']) for (const [k, v] of Object.entries(STRINGS[lang])) assert.doesNotMatch(v, claim, `${lang}.${k}`);
+});

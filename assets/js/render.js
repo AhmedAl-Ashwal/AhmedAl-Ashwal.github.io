@@ -20,7 +20,7 @@ export function renderAbout(el, c) {
   const { PROFILE, PROJECTS } = c.data;
   const stats = [
     { value: String(PROJECTS.length), key: 'stats.systems' },
-    { value: PROFILE.stats.tests, key: 'stats.tests' },
+    { value: PROFILE.stats.years, key: 'stats.years' },
     { value: PROFILE.stats.erpApps, key: 'stats.apps' },
   ];
   clear(el).append(
