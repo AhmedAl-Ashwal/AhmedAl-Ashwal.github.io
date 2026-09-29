@@ -1,4 +1,4 @@
-import { h, s, clear, pad } from './dom.js';
+import { h, s, clear, pad, mark } from './dom.js';
 import { domainSummary, skillName } from './model.js';
 import { t, count } from './i18n.js';
 
@@ -15,7 +15,7 @@ export function renderGraph(root, c) {
   const startCol = h('div', { class: 'graph-col' });
   const endCol = h('div', { class: 'graph-col' });
   const core = h('div', { class: 'graph-core' },
-    h('img', { class: 'graph-core__photo', src: PROFILE.photo, alt: PROFILE.name[c.lang], width: '88', height: '88' }),
+    mark(56),
     h('span', { class: 'graph-core__name' }, PROFILE.name[c.lang]),
     h('span', { class: 'graph-core__role' }, c.t('graph.core')));
   const svg = s('svg', { class: 'graph-traces', 'aria-hidden': 'true', focusable: 'false' });

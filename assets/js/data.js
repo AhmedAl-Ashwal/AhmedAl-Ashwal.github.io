@@ -9,7 +9,6 @@ export const PROFILE = {
   github: 'https://github.com/AhmedAl-Ashwal',
   linkedin: 'https://www.linkedin.com/in/ahmed-alashwal-b5605537a/',
   site: 'https://ahmedal-ashwal.github.io/',
-  photo: 'assets/images/profile.png',
   guidePdf: 'assets/files/web-pricing-guide-2026.pdf',
   stats: { tests: '2,200+', erpApps: '18' },
 };

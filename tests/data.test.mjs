@@ -103,3 +103,10 @@ test('contact details match the approved values', () => {
   assert.equal(data.PROFILE.email, 'aalashwal.sa@gmail.com');
   assert.equal(data.PROFILE.whatsapp, '967774007288');
 });
+
+test('the site carries no personal photo (page, social preview or structured data)', async () => {
+  const { readFile } = await import('node:fs/promises');
+  const html = await readFile(new URL('../index.html', import.meta.url), 'utf8');
+  assert.equal('photo' in data.PROFILE, false);
+  assert.doesNotMatch(html, /profile\.(png|jpe?g|webp)/i);
+});

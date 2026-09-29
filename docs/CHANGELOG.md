@@ -19,4 +19,5 @@ All notable changes to this project are documented here, in the style of [Keep a
 - Arabic set in Thmanyah; English in IBM Plex.
 
 ### Removed
+- Personal photo: removed from the hero graph (the Keystone mark is now the core node), the social preview image and the structured data; `assets/images/profile.png` deleted.
 - The *qamariyya*/System Map design, the `< • >` logo and the old single-file `main.js` dictionary.
