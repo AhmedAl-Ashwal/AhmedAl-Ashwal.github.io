@@ -1,0 +1,75 @@
+/* Generated from DESIGN.md - edit the DESIGN.md, not this file. */
+:root {
+  /* color */
+  --color-primary: #2F5FD0;
+  --color-primary-bright: #6E95F0;
+  --color-primary-ink: #2451C7;
+  --color-on-primary: #FFFFFF;
+  --color-canvas: #0B1628;
+  --color-dot: #1D2C4A;
+  --color-panel: #16233D;
+  --color-panel-2: #1C2B49;
+  --color-hairline: #26365A;
+  --color-hairline-strong: #3A4D75;
+  --color-ink: #F2F5FA;
+  --color-ink-muted: #C9D4E5;
+  --color-ink-subtle: #8FA3C2;
+  --color-ink-tertiary: #5E7090;
+  --color-status-ok: #2E9E6B;
+  --color-paper: #F7F8FA;
+  --color-paper-surface: #FFFFFF;
+  --color-paper-2: #E4E9F1;
+  --color-paper-line: #D5DCE8;
+  --color-paper-ink: #0B1628;
+  --color-paper-muted: #33425C;
+  --color-paper-subtle: #5A6B85;
+  /* radius */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-pill: 999px;
+  /* spacing */
+  --space-xxs: 4px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-xxl: 48px;
+  --space-section: 96px;
+  --space-gutter: 24px;
+  /* type scale */
+  --text-display-xl: 60px;
+  --text-display-xl-ar: 56px;
+  --text-headline: 34px;
+  --text-headline-ar: 34px;
+  --text-title: 18px;
+  --text-title-ar: 18px;
+  --text-body: 16px;
+  --text-body-ar: 16px;
+  --text-body-sm: 14px;
+  --text-body-sm-ar: 14px;
+  --text-mono: 12.5px;
+  --text-mono-num: 15px;
+  --text-price: 30px;
+  --font-ibm-plex-sans: "IBM Plex Sans";
+  --font-thmanyah-serif-display: "Thmanyah Serif Display";
+  --font-thmanyah-sans: "Thmanyah Sans";
+  --font-ibm-plex-mono: "IBM Plex Mono";
+}
+
+/* Type styles - apply as a single class so size, weight, leading and
+   tracking always travel together. Splitting them is how scales drift. */
+.type-display-xl { font-family: "IBM Plex Sans"; font-size: var(--text-display-xl); font-weight: 600; line-height: 1.06; letter-spacing: -1.6px; }
+.type-display-xl-ar { font-family: "Thmanyah Serif Display"; font-size: var(--text-display-xl-ar); font-weight: 700; line-height: 1.3; letter-spacing: 0; }
+.type-headline { font-family: "IBM Plex Sans"; font-size: var(--text-headline); font-weight: 600; line-height: 1.15; letter-spacing: -0.6px; }
+.type-headline-ar { font-family: "Thmanyah Serif Display"; font-size: var(--text-headline-ar); font-weight: 700; line-height: 1.35; letter-spacing: 0; }
+.type-title { font-family: "IBM Plex Sans"; font-size: var(--text-title); font-weight: 600; line-height: 1.35; letter-spacing: -0.2px; }
+.type-title-ar { font-family: "Thmanyah Sans"; font-size: var(--text-title-ar); font-weight: 700; line-height: 1.5; letter-spacing: 0; }
+.type-body { font-family: "IBM Plex Sans"; font-size: var(--text-body); font-weight: 400; line-height: 1.65; letter-spacing: 0; }
+.type-body-ar { font-family: "Thmanyah Sans"; font-size: var(--text-body-ar); font-weight: 400; line-height: 1.9; letter-spacing: 0; }
+.type-body-sm { font-family: "IBM Plex Sans"; font-size: var(--text-body-sm); font-weight: 400; line-height: 1.6; letter-spacing: 0; }
+.type-body-sm-ar { font-family: "Thmanyah Sans"; font-size: var(--text-body-sm-ar); font-weight: 400; line-height: 1.8; letter-spacing: 0; }
+.type-mono { font-family: "IBM Plex Mono"; font-size: var(--text-mono); font-weight: 500; line-height: 1.4; letter-spacing: 0.3px; }
+.type-mono-num { font-family: "IBM Plex Mono"; font-size: var(--text-mono-num); font-weight: 600; line-height: 1.3; letter-spacing: 0; }
+.type-price { font-family: "IBM Plex Mono"; font-size: var(--text-price); font-weight: 600; line-height: 1.1; letter-spacing: -0.6px; }

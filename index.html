@@ -1,357 +1,104 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" dir="ltr">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ahmed Alashwal — ERP, Web &amp; Mobile Developer · أحمد الأشول</title>
-  <meta name="description" content="Ahmed Alashwal — ERP Systems, Web & Mobile Applications Developer in Sana'a, Yemen. Laravel, Flutter, Python. I turn paper operations into digital systems.">
-  <meta name="author" content="Ahmed Alashwal">
-  <meta name="theme-color" content="#0B1017">
+  <title>Ahmed Alashwal — Systems Engineer · ERP, Web & Mobile</title>
+  <meta name="description" content="Ahmed Alashwal designs and builds ERP, web and mobile systems end to end: ERPNext/Frappe, Laravel, NestJS and Flutter. Based in Sana'a, Yemen.">
+  <meta name="theme-color" content="#0B1628">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Ahmed Alashwal — ERP, Web & Mobile Developer">
-  <meta property="og:description" content="I turn paper operations into digital systems. Laravel · Flutter · Python — Sana'a, Yemen.">
+  <meta property="og:title" content="Ahmed Alashwal — Systems Engineer · ERP, Web & Mobile">
+  <meta property="og:description" content="Systems that institutions run on. ERP, web and mobile, from the database to the interface.">
   <meta property="og:image" content="https://ahmedal-ashwal.github.io/assets/images/profile.png">
   <meta property="og:url" content="https://ahmedal-ashwal.github.io/">
   <meta property="og:locale" content="en_US">
   <meta property="og:locale:alternate" content="ar_YE">
-  <meta name="twitter:card" content="summary">
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Sans+Arabic:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Sans+Arabic:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@dawod/thmanyah-font-web@1.2.0/sans.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@dawod/thmanyah-font-web@1.2.0/serif-display.css">
+  <link rel="stylesheet" href="assets/css/tokens.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Ahmed Alashwal",
-    "alternateName": "أحمد عبد الوهاب الأشول",
-    "jobTitle": "ERP Systems, Web & Mobile Applications Developer",
-    "worksFor": { "@type": "Organization", "name": "Agricultural and Fisheries Production Promotion Fund" },
-    "address": { "@type": "PostalAddress", "addressLocality": "Sana'a", "addressCountry": "YE" },
-    "email": "mailto:aalashwal14@gmail.com",
+    "alternateName": "أحمد الأشول",
+    "jobTitle": "Systems Engineer — ERP, Web & Mobile",
     "url": "https://ahmedal-ashwal.github.io/",
-    "sameAs": [
-      "https://github.com/AhmedAl-Ashwal",
-      "https://www.linkedin.com/in/ahmed-alashwal-b5605537a/"
-    ]
+    "email": "mailto:aalashwal.sa@gmail.com",
+    "image": "https://ahmedal-ashwal.github.io/assets/images/profile.png",
+    "address": { "@type": "PostalAddress", "addressLocality": "Sana'a", "addressCountry": "YE" },
+    "sameAs": ["https://github.com/AhmedAl-Ashwal", "https://www.linkedin.com/in/ahmed-alashwal-b5605537a/"],
+    "knowsAbout": ["ERPNext", "Frappe", "Laravel", "Flutter", "NestJS", "PostgreSQL", "MySQL", "Docker"]
   }
   </script>
+  <script type="module" src="assets/js/main.js"></script>
 </head>
 <body>
+  <a class="skip" href="#main" data-i18n="skip">Skip to content</a>
 
-<a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
-
-<header class="topbar" id="top">
-  <nav class="nav container" aria-label="Primary">
-    <a class="monogram" href="#top" aria-label="Ahmed Alashwal — home">
-      <svg viewBox="0 0 32 32" width="26" height="26" aria-hidden="true" focusable="false">
-        <g stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none">
-          <path d="M14 10 L8 16 L14 22"/>
-          <path d="M18 10 L24 16 L18 22"/>
-        </g>
-        <circle cx="8" cy="16" r="2" fill="currentColor"/>
-        <circle cx="24" cy="16" r="2" fill="currentColor"/>
-        <circle cx="16" cy="16" r="3" fill="#3ECF8E"/>
-      </svg>
-      <span data-i18n="brand">Ahmed Alashwal</span>
-    </a>
-    <div class="nav-right">
-      <ul class="nav-links">
-        <li><a href="#about" data-i18n="nav.about">About</a></li>
-        <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
-        <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
-        <li><a href="#education" data-i18n="nav.education">Education</a></li>
-        <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
-      </ul>
-      <button class="lang-toggle" id="langToggle" type="button" aria-label="عرض الموقع بالعربية">
-        <span class="lang-current">EN</span>
-        <span class="lang-divider" aria-hidden="true">/</span>
-        <span class="lang-next">ع</span>
-      </button>
-    </div>
-  </nav>
-</header>
-
-<main id="main">
-
-  <!-- ======================= HERO ======================= -->
-  <section class="hero container">
-    <div class="hero-copy reveal">
-      <p class="badge">
-        <span class="badge-dot" aria-hidden="true"></span>
-        <span data-i18n="hero.badge">Open to work, collaboration</span>
-      </p>
-      <h1 class="hero-title" data-i18n-html="hero.title">I turn paper operations into <em>digital systems</em>.</h1>
-      <p class="hero-sub" data-i18n="hero.sub">ERP Systems, Web &amp; Mobile Applications Developer — building with Laravel, Flutter, and Python.</p>
-      <div class="cta-row">
-        <a class="btn btn-solid" href="mailto:aalashwal14@gmail.com">
-          <svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true" focusable="false"><path fill="currentColor" d="M4 5h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Zm8 7.3 8-5.3H4l8 5.3Zm0 2.4L4 9.4V17h16V9.4l-8 5.3Z"/></svg>
-          <span data-i18n="hero.ctaEmail">Email me</span>
-        </a>
-        <a class="btn btn-line" href="https://github.com/AhmedAl-Ashwal" target="_blank" rel="noopener noreferrer">
-          <svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.58 9.58 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85V21c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
-          <span>GitHub</span>
-        </a>
-        <a class="btn btn-line" href="https://www.linkedin.com/in/ahmed-alashwal-b5605537a/" target="_blank" rel="noopener noreferrer">
-          <svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true" focusable="false"><path fill="currentColor" d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0ZM.24 8.31h4.52V23H.24V8.31Zm7.44 0h4.33v2h.06c.6-1.14 2.08-2.34 4.28-2.34 4.57 0 5.41 3.01 5.41 6.92V23h-4.52v-7.2c0-1.72-.03-3.93-2.4-3.93-2.4 0-2.77 1.87-2.77 3.8V23H7.68V8.31Z"/></svg>
-          <span>LinkedIn</span>
-        </a>
+  <header class="topbar">
+    <div class="wrap topbar__inner">
+      <a class="brand" href="#top" aria-label="Ahmed Alashwal">
+        <svg class="mark" viewBox="0 0 48 48" width="28" height="28" aria-hidden="true" focusable="false"><path class="mark__legs" d="M8 43 24 5l16 38"/><rect class="mark__block" x="19" y="26" width="10" height="10"/></svg>
+        <span class="brand__text lat"><b>Ahmed Alashwal</b><small>Systems Engineer</small></span>
+      </a>
+      <nav class="nav" id="nav" aria-label="Sections"></nav>
+      <div class="topbar__tools">
+        <button class="tool-btn" id="lang-btn" type="button" lang="ar">العربية</button>
+        <button class="tool-btn" id="cmd-btn" type="button" aria-haspopup="dialog" aria-controls="palette"><span data-i18n="cmd.open">Commands</span> <kbd class="lat" data-shortcut>Ctrl K</kbd></button>
       </div>
-      <dl class="ledger" aria-label="Key facts">
-        <div class="ledger-item">
-          <dt data-i18n="ledger.location">LOCATION</dt>
-          <dd data-i18n="ledger.locationV">Sana'a · Yemen</dd>
-        </div>
-        <div class="ledger-item">
-          <dt data-i18n="ledger.gpa">DEGREE</dt>
-          <dd data-i18n="ledger.gpaV">BIT — GPA 3.79 / 4.00</dd>
-        </div>
-        <div class="ledger-item">
-          <dt data-i18n="ledger.stack">STACK</dt>
-          <dd>Laravel · Flutter · Python</dd>
-        </div>
-      </dl>
     </div>
+  </header>
 
-    <figure class="sysmap reveal" aria-label="System architecture diagram with Ahmed Alashwal as the central node connected to web, mobile, data, and AI modules">
-      <svg viewBox="0 0 460 440" role="img" aria-hidden="true" focusable="false">
-        <!-- connectors -->
-        <g class="sys-wires" fill="none" stroke-width="1.5">
-          <path class="wire" d="M 186,162 C 150,130 128,108 96,84"/>
-          <path class="wire" d="M 274,162 C 310,130 332,108 364,84"/>
-          <path class="wire" d="M 186,272 C 150,304 128,326 96,350"/>
-          <path class="wire" d="M 274,272 C 310,304 332,326 364,350"/>
-          <path class="flow flow-web" d="M 96,84 C 128,108 150,130 186,162"/>
-          <path class="flow flow-mobile" d="M 274,162 C 310,130 332,108 364,84"/>
-          <path class="flow" d="M 96,350 C 128,326 150,304 186,272"/>
-          <path class="flow flow-ai" d="M 274,272 C 310,304 332,326 364,350"/>
-        </g>
-
-        <!-- modules -->
-        <g class="sys-node sys-a">
-          <rect x="12" y="26" width="168" height="56" rx="10"/>
-          <circle class="port port-web" cx="96" cy="82" r="3.5"/>
-          <text class="mod-name" x="96" y="49">web</text>
-          <text class="mod-tech" x="96" y="68">Laravel · PHP</text>
-        </g>
-        <g class="sys-node sys-b">
-          <rect x="280" y="26" width="168" height="56" rx="10"/>
-          <circle class="port port-mobile" cx="364" cy="82" r="3.5"/>
-          <text class="mod-name" x="364" y="49">mobile</text>
-          <text class="mod-tech" x="364" y="68">Flutter · Dart</text>
-        </g>
-        <g class="sys-node sys-c">
-          <rect x="12" y="352" width="168" height="56" rx="10"/>
-          <circle class="port" cx="96" cy="352" r="3.5"/>
-          <text class="mod-name" x="96" y="376">data</text>
-          <text class="mod-tech" x="96" y="395">MySQL · SQL Server · Oracle</text>
-        </g>
-        <g class="sys-node sys-d sys-ai">
-          <rect x="280" y="352" width="168" height="56" rx="10"/>
-          <circle class="port port-ai" cx="364" cy="352" r="3.5"/>
-          <text class="mod-name" x="364" y="376">ai &amp; analysis</text>
-          <text class="mod-tech" x="364" y="395">Python · UML → M.Sc.</text>
-        </g>
-
-        <!-- core node: the engineer -->
-        <g class="sys-node sys-core">
-          <circle class="core-ring" cx="230" cy="217" r="74"/>
-          <circle class="core-bg" cx="230" cy="217" r="62"/>
-          <g class="core-mark" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M222 193 L198 217 L222 241"/>
-            <path d="M238 193 L262 217 L238 241"/>
-          </g>
-          <g class="core-nodes">
-            <circle cx="198" cy="217" r="7.5"/>
-            <circle cx="262" cy="217" r="7.5"/>
-          </g>
-          <circle class="core-dot" cx="230" cy="217" r="11"/>
-          <circle class="core-edge" cx="230" cy="217" r="62"/>
-          <g class="status">
-            <rect x="196" y="296" width="68" height="21" rx="10.5"/>
-            <circle cx="208" cy="306.5" r="3"/>
-            <text x="217" y="310.5">online</text>
-          </g>
-        </g>
-      </svg>
-      <figcaption class="sysmap-caption" data-i18n="sysmap.caption">System map — the modules I build and connect</figcaption>
-    </figure>
-  </section>
-
-  <div class="frieze" role="presentation"></div>
-
-  <!-- ======================= ABOUT ======================= -->
-  <section class="section container" id="about">
-    <p class="eyebrow" data-i18n="about.eyebrow">ABOUT</p>
-    <h2 class="section-title" data-i18n="about.title">A developer institutions can run on</h2>
-    <div class="about-grid">
-      <div class="about-text reveal">
-        <p data-i18n="about.p1">I'm a Business Information Technology graduate (GPA 3.79/4.00) with hands-on experience building web, mobile, and ERP applications. At the Agricultural &amp; Fisheries Production Promotion Fund, I introduced the organization's first digital inventory system — and today I design, build, and maintain the custom ERP it runs on.</p>
-        <p data-i18n="about.p2">Beyond code, I keep the internal network running, resolve technical issues across the organization, and train non-technical staff to use the systems I build. I'm currently preparing for an M.Sc. in Information Technology to deepen this practical foundation.</p>
+  <main id="main">
+    <section class="hero wrap" id="top" aria-labelledby="hero-title">
+      <div class="hero__head">
+        <p class="eyebrow lat" data-i18n="hero.eyebrow">// system.canvas · Sana'a</p>
+        <h1 class="hero__title" id="hero-title" data-i18n="hero.title">Systems that institutions run on.</h1>
+        <p class="hero__lede" data-i18n="hero.lede">I design and build ERP, web and mobile systems end to end, from the database to the interface, for organisations that need software they can depend on.</p>
+        <div class="hero__ctas">
+          <a class="btn btn--primary" href="#estimator" data-i18n="hero.ctaEstimate">Estimate a project</a>
+          <a class="btn btn--ghost" href="#projects" data-i18n="hero.ctaProjects">Browse projects</a>
+        </div>
       </div>
-      <ul class="about-facts reveal">
-        <li>
-          <span class="fact-num" data-i18n="about.f1n">2+</span>
-          <span class="fact-label" data-i18n="about.f1">years building with Laravel &amp; Flutter</span>
-        </li>
-        <li>
-          <span class="fact-num" data-i18n="about.f2n">1st</span>
-          <span class="fact-label" data-i18n="about.f2">digital inventory system introduced at my organization</span>
-        </li>
-        <li>
-          <span class="fact-num" data-i18n="about.f3n">3</span>
-          <span class="fact-label" data-i18n="about.f3">database engines in production use — MySQL, SQL Server, Oracle</span>
-        </li>
-      </ul>
+      <div class="canvas-frame">
+        <div class="frame-label"><span class="lat">architecture.canvas</span><span data-i18n="hero.hint">Select a domain to inspect it</span></div>
+        <div class="graph" id="graph"></div>
+      </div>
+    </section>
+    <section class="section wrap" id="about" aria-labelledby="about-h"></section>
+    <section class="section wrap" id="skills" aria-labelledby="skills-h"></section>
+    <section class="section wrap" id="projects" aria-labelledby="projects-h"></section>
+    <section class="section wrap" id="log" aria-labelledby="log-h"></section>
+    <section class="section wrap" id="services" aria-labelledby="services-h"></section>
+    <section class="section wrap" id="contact" aria-labelledby="contact-h"></section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner"><span class="lat">© 2026 Ahmed Alashwal</span><span data-i18n="footer.made">Hand-built with HTML, CSS and JavaScript. No frameworks.</span></div>
+  </footer>
+
+  <aside class="inspector" id="inspector" role="dialog" aria-modal="false" aria-labelledby="inspector-title" hidden></aside>
+  <dialog class="dialog" id="project-dialog" aria-labelledby="project-title"></dialog>
+  <dialog class="palette" id="palette" aria-label="Command palette"></dialog>
+
+  <div class="statusbar">
+    <div class="wrap statusbar__inner">
+      <span class="statusbar__item"><i class="status-dot" aria-hidden="true"></i><span data-i18n="status.available">Available for projects</span></span>
+      <span class="statusbar__item hide-sm" data-i18n="status.location">Sana'a · UTC+3</span>
+      <span class="statusbar__msg" id="status-msg" role="status" aria-live="polite"></span>
+      <span class="statusbar__end">
+        <button type="button" id="status-lang" data-i18n="lang.switch">العربية</button>
+        <button type="button" id="status-cmd"><kbd class="lat" data-shortcut>Ctrl K</kbd> <span data-i18n="cmd.open">Commands</span></button>
+      </span>
     </div>
-  </section>
-
-  <div class="frieze" role="presentation"></div>
-
-  <!-- ======================= EXPERIENCE ======================= -->
-  <section class="section container" id="experience">
-    <p class="eyebrow" data-i18n="exp.eyebrow">EXPERIENCE</p>
-    <h2 class="section-title" data-i18n="exp.title">Where I've built</h2>
-    <ol class="timeline">
-      <li class="t-item reveal">
-        <span class="t-dot" aria-hidden="true"></span>
-        <p class="t-period" data-i18n="exp.j1.period">Nov 2024 — Present</p>
-        <h3 class="t-role" data-i18n="exp.j1.role">ERP Systems, Web &amp; Mobile Applications Developer</h3>
-        <p class="t-org" data-i18n="exp.j1.org">Agricultural &amp; Fisheries Production Promotion Fund · Sana'a</p>
-        <ul class="t-points">
-          <li data-i18n="exp.j1.b1">Develop and maintain the organization's Laravel-based inventory management system and a custom ERP.</li>
-          <li data-i18n="exp.j1.b2">Supervise the internal network and resolve technical problems across the organization.</li>
-          <li data-i18n="exp.j1.b3">Train staff in computer fundamentals and day-to-day system usage.</li>
-        </ul>
-        <p class="t-stack"><span>Laravel</span><span>Flutter</span><span>MySQL</span><span>SQL Server</span></p>
-      </li>
-      <li class="t-item reveal">
-        <span class="t-dot" aria-hidden="true"></span>
-        <p class="t-period" data-i18n="exp.j2.period">Aug — Oct 2024</p>
-        <h3 class="t-role" data-i18n="exp.j2.role">Volunteer Web Developer</h3>
-        <p class="t-org" data-i18n="exp.j2.org">Agricultural &amp; Fisheries Production Promotion Fund · Sana'a</p>
-        <ul class="t-points">
-          <li data-i18n="exp.j2.b1">Introduced digital systems to the organization and built its first Laravel-based inventory management system.</li>
-          <li data-i18n="exp.j2.b2">Managed the internal network and handled day-to-day technical issues.</li>
-        </ul>
-        <p class="t-stack"><span>Laravel</span><span>Bootstrap</span><span>MySQL</span></p>
-      </li>
-      <li class="t-item reveal">
-        <span class="t-dot" aria-hidden="true"></span>
-        <p class="t-period" data-i18n="exp.j3.period">Jan — Jul 2024</p>
-        <h3 class="t-role" data-i18n="exp.j3.role">Software Development Trainee</h3>
-        <p class="t-org" data-i18n="exp.j3.org">Social Fund for Development · Sana'a</p>
-        <ul class="t-points">
-          <li data-i18n="exp.j3.b1">Completed development tasks in PHP and Dart using the Laravel and Flutter frameworks.</li>
-        </ul>
-        <p class="t-stack"><span>PHP</span><span>Dart</span><span>Postman</span></p>
-      </li>
-    </ol>
-  </section>
-
-  <div class="frieze" role="presentation"></div>
-
-  <!-- ======================= SKILLS ======================= -->
-  <section class="section container" id="skills">
-    <p class="eyebrow" data-i18n="skills.eyebrow">SKILLS</p>
-    <h2 class="section-title" data-i18n="skills.title">Tools of the trade</h2>
-    <div class="skills-grid">
-      <article class="skill-card reveal">
-        <h3 data-i18n="skills.web">Web</h3>
-        <ul>
-          <li>PHP (Laravel)</li>
-          <li>JavaScript · TypeScript</li>
-          <li>Node.js · React</li>
-          <li>REST &amp; GraphQL APIs</li>
-          <li>HTML5 · CSS · Bootstrap</li>
-        </ul>
-      </article>
-      <article class="skill-card reveal">
-        <h3 data-i18n="skills.mobile">Mobile</h3>
-        <ul>
-          <li>Flutter (Dart)</li>
-          <li data-i18n="skills.mobileNote">Cross-platform apps, API-driven</li>
-        </ul>
-      </article>
-      <article class="skill-card reveal">
-        <h3 data-i18n="skills.db">Databases</h3>
-        <ul>
-          <li>MySQL</li>
-          <li>PostgreSQL</li>
-          <li>SQL Server</li>
-          <li>Oracle</li>
-        </ul>
-      </article>
-      <article class="skill-card reveal">
-        <h3 data-i18n="skills.tools">Tools &amp; Analysis</h3>
-        <ul>
-          <li>Python</li>
-          <li>Git · GitHub · Postman</li>
-          <li data-i18n="skills.uml">UML systems analysis</li>
-        </ul>
-      </article>
-    </div>
-  </section>
-
-  <div class="frieze" role="presentation"></div>
-
-  <!-- ======================= EDUCATION ======================= -->
-  <section class="section container" id="education">
-    <p class="eyebrow" data-i18n="edu.eyebrow">EDUCATION &amp; TRAINING</p>
-    <h2 class="section-title" data-i18n="edu.title">Grounded in study</h2>
-    <div class="edu-grid">
-      <article class="edu-card reveal">
-        <p class="edu-years">2023 — 2024</p>
-        <h3 data-i18n="edu.degree">B.Sc. in Business Information Technology (BIT)</h3>
-        <p class="edu-school" data-i18n="edu.school">International University of Technology Twintech (IUTT) · Sana'a</p>
-        <p class="edu-gpa"><span data-i18n="edu.gpaLabel">Cumulative GPA</span> <strong>3.79 / 4.00</strong> · <span data-i18n="edu.eqf">EQF Level 6</span></p>
-        <p class="edu-areas" data-i18n="edu.areas">Web &amp; mobile development · databases · systems analysis (UML) · business information systems</p>
-      </article>
-      <article class="edu-card reveal">
-        <h3 data-i18n="edu.coursesTitle">Courses &amp; certifications</h3>
-        <ul class="chips">
-          <li data-i18n="edu.c1">PHP (Laravel) &amp; Flutter development — Social Fund for Development</li>
-          <li data-i18n="edu.c2">Website Design — Google Developer Student Clubs</li>
-          <li data-i18n="edu.c3">Strategic Planning — Ministry of Finance</li>
-          <li data-i18n="edu.c4">Crisis Management — online training</li>
-        </ul>
-        <h3 class="edu-langs-title" data-i18n="edu.langsTitle">Languages</h3>
-        <ul class="chips">
-          <li data-i18n="edu.lang1">Arabic — native</li>
-          <li data-i18n="edu.lang2">English — B2 (CEFR)</li>
-        </ul>
-      </article>
-    </div>
-  </section>
-
-  <div class="frieze" role="presentation"></div>
-
-  <!-- ======================= CONTACT ======================= -->
-  <section class="section container contact" id="contact">
-    <p class="eyebrow" data-i18n="contact.eyebrow">CONTACT</p>
-    <h2 class="section-title" data-i18n="contact.title">Let's build something reliable</h2>
-    <p class="contact-lede reveal" data-i18n="contact.lede">Whether it's an ERP system, a mobile app, web app, or an idea that's still on paper — I'd be glad to hear from you.</p>
-    <div class="cta-row reveal">
-      <a class="btn btn-solid" href="mailto:aalashwal14@gmail.com">aalashwal14@gmail.com</a>
-      <a class="btn btn-line" href="tel:+967774007288"><span dir="ltr">+967 774 007 288</span></a>
-    </div>
-    <p class="contact-social reveal">
-      <a href="https://github.com/AhmedAl-Ashwal" target="_blank" rel="noopener noreferrer">GitHub</a>
-      <span aria-hidden="true">·</span>
-      <a href="https://www.linkedin.com/in/ahmed-alashwal-b5605537a/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-    </p>
-  </section>
-
-</main>
-
-<footer class="footer">
-  <div class="container footer-inner">
-    <span data-i18n="footer.left">© 2026 Ahmed Alashwal — Sana'a, Yemen</span>
-    <span class="footer-mark" data-i18n="footer.right">صُنع بعناية في صنعاء</span>
   </div>
-</footer>
 
-<script src="assets/js/main.js" defer></script>
+  <noscript><p class="wrap noscript">This page needs JavaScript for its interactive canvas. Email: aalashwal.sa@gmail.com · GitHub: github.com/AhmedAl-Ashwal</p></noscript>
 </body>
 </html>
