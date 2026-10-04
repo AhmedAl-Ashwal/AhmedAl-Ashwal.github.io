@@ -346,7 +346,7 @@ export const SERVICES = [
     text: { en: 'Each page beyond the three included in the website.', ar: 'كل صفحة تزيد على الصفحات الثلاث المشمولة في الموقع.' } },
   { id: 'features', code: 'ADD-FT', min: 200, max: 300, unit: 'feature',
     title: { en: 'Extra features', ar: 'ميزات إضافية' },
-    text: { en: 'Interactive UI, languages, dark mode or a custom feature, as your project needs.', ar: 'واجهات تفاعلية أو لغات أو وضع ليلي أو ميزة خاصة، بحسب احتياج مشروعك.' } },
+    text: { en: 'Interactive interfaces and other custom features, as your project needs.', ar: 'واجهات تفاعلية وغيرها من الميزات الخاصة، بحسب احتياج مشروعك.' } },
   { id: 'dashboard-standard', code: 'DSH-L1', min: 3000, max: 4000,
     title: { en: 'Standard dashboard', ar: 'لوحة تحكم عادية' },
     text: { en: 'Standard indicators, defined users and roles, and a small database for customer records.', ar: 'مؤشرات عادية ومستخدمون وأدوار محددة وقاعدة بيانات صغيرة لحفظ بيانات العملاء.' } },
