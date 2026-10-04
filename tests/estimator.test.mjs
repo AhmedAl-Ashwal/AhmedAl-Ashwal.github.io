@@ -13,9 +13,15 @@ test('basic website is 3,000–4,000', () => {
   assert.deepEqual([r.min, r.max, r.openEnded], [3000, 4000, false]);
 });
 
-test('full website with two extras adds 600–1,000', () => {
-  const r = estimate({ website: 'full', extras: 2 });
-  assert.deepEqual([r.min, r.max], [4600, 6000]);
+test('full website with two extra pages adds 200–400', () => {
+  const r = estimate({ website: 'full', pages: 2 });
+  assert.deepEqual([r.min, r.max], [4200, 5400]);
+});
+
+test('an extra page is 100–200 and an extra feature is 200–300, priced separately', () => {
+  const r = estimate({ website: 'basic', pages: 1, features: 3 });
+  assert.deepEqual(r.lines.map((l) => [l.key, l.qty, l.min, l.max]), [['website.basic', 1, 3000, 4000], ['pages', 1, 100, 200], ['features', 3, 600, 900]]);
+  assert.deepEqual([r.min, r.max], [3700, 5100]);
 });
 
 test('standard dashboard plus chatbot is 5,000–6,000', () => {
@@ -28,9 +34,9 @@ test('medium dashboard makes the total open-ended from 5,000', () => {
   assert.deepEqual([r.min, r.max, r.openEnded], [5000, null, true]);
 });
 
-test('large dashboard adds 500 per extra section', () => {
+test('large dashboard adds 250 per extra section', () => {
   const r = estimate({ dashboard: 'large', sections: 2 });
-  assert.deepEqual([r.min, r.openEnded], [7000, true]);
+  assert.deepEqual([r.min, r.openEnded], [6500, true]);
 });
 
 test('extra sections count only with a large dashboard', () => {
@@ -39,20 +45,20 @@ test('extra sections count only with a large dashboard', () => {
 });
 
 test('hostile input is normalised, never trusted', () => {
-  assert.deepEqual(normalizeSelection({ website: 'enterprise', extras: -3, dashboard: 42, chatbot: 'yes' }),
-    { website: 'none', extras: 0, dashboard: 'none', sections: 0, chatbot: false });
-  assert.equal(normalizeSelection({ extras: 'abc' }).extras, 0);
-  assert.equal(normalizeSelection({ extras: '2' }).extras, 2);
-  assert.equal(normalizeSelection({ extras: 2.7 }).extras, 2);
-  assert.equal(normalizeSelection({ extras: 999 }).extras, 20);
-  assert.equal(normalizeSelection({ extras: null }).extras, 0);
+  assert.deepEqual(normalizeSelection({ website: 'enterprise', pages: -3, features: -1, dashboard: 42, chatbot: 'yes' }),
+    { website: 'none', pages: 0, features: 0, dashboard: 'none', sections: 0, chatbot: false });
+  assert.equal(normalizeSelection({ pages: 'abc' }).pages, 0);
+  assert.equal(normalizeSelection({ pages: '2' }).pages, 2);
+  assert.equal(normalizeSelection({ features: 2.7 }).features, 2);
+  assert.equal(normalizeSelection({ features: 999 }).features, 20);
+  assert.equal(normalizeSelection({ pages: null }).pages, 0);
   assert.equal(normalizeSelection(undefined).website, 'none');
-  const r = estimate({ website: 'basic', extras: 'NaN' });
+  const r = estimate({ website: 'basic', pages: 'NaN', features: 'NaN' });
   assert.ok(Number.isFinite(r.min) && r.min >= 0);
 });
 
 test('normalizeSelection is idempotent, so state survives a language switch', () => {
-  const once = normalizeSelection({ website: 'full', extras: 3, dashboard: 'large', sections: 1, chatbot: true });
+  const once = normalizeSelection({ website: 'full', pages: 3, features: 2, dashboard: 'large', sections: 1, chatbot: true });
   assert.deepEqual(normalizeSelection(once), once);
 });
 
@@ -65,7 +71,7 @@ test('formatAmount in both languages', () => {
 });
 
 test('every line key has an i18n string in both languages', () => {
-  const all = estimate({ website: 'full', extras: 1, dashboard: 'large', sections: 1, chatbot: true });
+  const all = estimate({ website: 'full', pages: 1, features: 1, dashboard: 'large', sections: 1, chatbot: true });
   const keys = [...all.lines.map((l) => `line.${l.key}`), 'line.website.basic', 'line.dashboard.standard', 'line.dashboard.medium'];
   for (const k of keys) for (const lang of ['en', 'ar']) assert.ok(STRINGS[lang][k], `${lang}:${k}`);
 });

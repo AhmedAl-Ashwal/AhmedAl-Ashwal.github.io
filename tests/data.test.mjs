@@ -94,7 +94,7 @@ test('every label key referenced by data exists', () => {
 });
 
 test('t() fills variables and falls back to English, then the key', () => {
-  assert.equal(t('en', 'line.extras', { n: 3 }), '3 extra pages or features');
+  assert.equal(t('en', 'line.pages', { n: 3 }), '3 extra pages');
   assert.equal(t('xx', 'nav.about'), 'About');
   assert.equal(t('en', 'missing.key'), 'missing.key');
 });
@@ -117,4 +117,21 @@ test('automated-test counts are not used as selling points anywhere in the copy'
   for (const d of data.DOMAINS) assert.doesNotMatch(JSON.stringify(d.summary), claim, d.id);
   assert.doesNotMatch(JSON.stringify(data.PROFILE.stats), claim);
   for (const lang of ['en', 'ar']) for (const [k, v] of Object.entries(STRINGS[lang])) assert.doesNotMatch(v, claim, `${lang}.${k}`);
+});
+
+test('service cards quote the same prices as the estimator', async () => {
+  const { PRICES } = await import('../assets/js/estimator.js');
+  const by = Object.fromEntries(data.SERVICES.map((s) => [s.id, s]));
+  const range = (s) => ({ min: s.min, max: s.max });
+  assert.deepEqual(range(by.website), PRICES.website.basic);
+  assert.equal(by.content.min, PRICES.website.full.min - PRICES.website.basic.min);
+  assert.deepEqual(range(by.pages), PRICES.extraPage);
+  assert.deepEqual(range(by.features), PRICES.extraFeature);
+  for (const tier of ['standard', 'medium', 'large']) assert.deepEqual(range(by[`dashboard-${tier}`]), PRICES.dashboard[tier]);
+  assert.equal(by['dashboard-large'].extra.amount, PRICES.extraSection);
+  assert.equal(by.ai.min, PRICES.chatbot);
+  for (const s of data.SERVICES) {
+    bi(s.title, `${s.id}.title`); bi(s.text, `${s.id}.text`);
+    for (const unit of [s.unit, s.extra?.unit].filter(Boolean)) for (const lang of ['en', 'ar']) assert.ok(STRINGS[lang][`services.unit.${unit}`], `${lang}:${unit}`);
+  }
 });

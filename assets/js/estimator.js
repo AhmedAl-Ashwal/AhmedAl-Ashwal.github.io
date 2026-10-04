@@ -1,9 +1,10 @@
 // Price-guide arithmetic. Pure and deterministic; the UI lives in calculator.js.
 export const PRICES = Object.freeze({
   website: { basic: { min: 3000, max: 4000 }, full: { min: 4000, max: 5000 } },
-  extraItem: { min: 300, max: 500 },
+  extraPage: { min: 100, max: 200 },
+  extraFeature: { min: 200, max: 300 },
   dashboard: { standard: { min: 3000, max: 4000 }, medium: { min: 5000, max: null }, large: { min: 6000, max: null } },
-  extraSection: 500,
+  extraSection: 250,
   chatbot: 2000,
   maxCount: 20,
 });
@@ -24,7 +25,8 @@ export function normalizeSelection(sel = {}) {
   const dashboard = DASHBOARD.includes(src.dashboard) ? src.dashboard : 'none';
   return {
     website,
-    extras: count(src.extras),
+    pages: count(src.pages),
+    features: count(src.features),
     dashboard,
     sections: dashboard === 'large' ? count(src.sections) : 0,
     chatbot: src.chatbot === true,
@@ -38,8 +40,11 @@ export function estimate(input) {
     const p = PRICES.website[sel.website];
     lines.push({ key: `website.${sel.website}`, qty: 1, min: p.min, max: p.max });
   }
-  if (sel.extras > 0) {
-    lines.push({ key: 'extras', qty: sel.extras, min: sel.extras * PRICES.extraItem.min, max: sel.extras * PRICES.extraItem.max });
+  if (sel.pages > 0) {
+    lines.push({ key: 'pages', qty: sel.pages, min: sel.pages * PRICES.extraPage.min, max: sel.pages * PRICES.extraPage.max });
+  }
+  if (sel.features > 0) {
+    lines.push({ key: 'features', qty: sel.features, min: sel.features * PRICES.extraFeature.min, max: sel.features * PRICES.extraFeature.max });
   }
   if (sel.dashboard !== 'none') {
     const p = PRICES.dashboard[sel.dashboard];
@@ -67,7 +72,7 @@ export function formatAmount(min, max, lang) {
   return `${formatSAR(min)} – ${formatSAR(max)} ${currency}`;
 }
 
-const SINGULAR_KEYS = new Set(['extras', 'sections']);
+const SINGULAR_KEYS = new Set(['pages', 'features', 'sections']);
 export const lineLabel = (line, tt) =>
   tt(SINGULAR_KEYS.has(line.key) && line.qty === 1 ? `line.${line.key}.one` : `line.${line.key}`, { n: line.qty });
 

@@ -160,7 +160,8 @@ export function renderServices(el, c) {
     h('span', { class: 'mono lat' }, sv.code),
     h('h3', {}, sv.title[c.lang]),
     h('p', { class: 'module__text' }, sv.text[c.lang]),
-    h('p', { class: 'module__price num' }, formatAmount(sv.min, sv.max, c.lang), sv.perItem ? h('small', {}, ` ${c.t('services.perItem')}`) : null)));
+    h('p', { class: 'module__price num' }, formatAmount(sv.min, sv.max, c.lang), sv.unit ? h('small', {}, ` ${c.t(`services.unit.${sv.unit}`)}`) : null),
+    sv.extra ? h('p', { class: 'module__extra num' }, `+ ${formatAmount(sv.extra.amount, sv.extra.amount, c.lang)}`, h('small', {}, ` ${c.t(`services.unit.${sv.extra.unit}`)}`)) : null));
   clear(el).append(
     sectionHead('services', c, { eyebrow: 'services.eyebrow', title: 'services.title', lede: 'services.lede' }),
     h('div', { class: 'modules' }, cards),

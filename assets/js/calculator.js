@@ -5,7 +5,7 @@ import { estimate, normalizeSelection, formatAmount, buildMessage, lineLabel, ma
 export function readSelection(form) {
   const el = form.elements;
   return normalizeSelection({
-    website: el.website.value, extras: el.extras.value, dashboard: el.dashboard.value,
+    website: el.website.value, pages: el.pages.value, features: el.features.value, dashboard: el.dashboard.value,
     sections: el.sections.value, chatbot: el.chatbot.checked,
   });
 }
@@ -37,7 +37,8 @@ export function renderCalculator(root, c) {
     h('h3', { class: 'est-title', id: 'est-title' }, c.t('est.title')),
     h('fieldset', {}, h('legend', {}, c.t('est.website')),
       h('div', { class: 'opts' }, radio('website', 'none', 'est.none'), radio('website', 'basic', 'est.basic'), radio('website', 'full', 'est.full'))),
-    stepper('extras', 'est.extras'),
+    stepper('pages', 'est.pages', 'est.pagesHint'),
+    stepper('features', 'est.features', 'est.featuresHint'),
     h('fieldset', {}, h('legend', {}, c.t('est.dashboard')),
       h('div', { class: 'opts' }, radio('dashboard', 'none', 'est.none'), radio('dashboard', 'standard', 'est.standard'), radio('dashboard', 'medium', 'est.medium'), radio('dashboard', 'large', 'est.large'))),
     stepper('sections', 'est.sections', 'est.sectionsHint'),
