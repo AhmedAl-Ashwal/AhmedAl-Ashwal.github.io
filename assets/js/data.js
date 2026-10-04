@@ -8,7 +8,7 @@ export const PROFILE = {
   whatsapp: '967774007288',
   github: 'https://github.com/AhmedAl-Ashwal',
   linkedin: 'https://www.linkedin.com/in/ahmed-alashwal-b5605537a/',
-  site: 'https://ahmedal-ashwal.github.io/',
+  site: 'https://ahmed-alashwal-sandy.vercel.app/',
   guidePdf: 'assets/files/web-pricing-guide-2026.pdf',
   stats: { years: '2+', erpApps: '18' },
 };
