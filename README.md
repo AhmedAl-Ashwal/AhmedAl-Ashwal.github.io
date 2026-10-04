@@ -2,7 +2,7 @@
 
 Personal site of **Ahmed Alashwal**, a systems engineer (ERP, web and mobile) based in Sana'a.
 
-**Live:** [ahmed-alashwal-sandy.vercel.app](https://ahmed-alashwal-sandy.vercel.app) · Arabic: [?lang=ar](https://ahmed-alashwal-sandy.vercel.app/?lang=ar)
+**Live:** [ahmed-alashwal.vercel.app](https://ahmed-alashwal.vercel.app) · Arabic: [?lang=ar](https://ahmed-alashwal.vercel.app/?lang=ar)
 
 - An interactive system canvas: a domain graph, a skill map tied to projects, project frames, a `git log` timeline and a project estimator
 - English and Arabic with full RTL; Ctrl/⌘K command palette
